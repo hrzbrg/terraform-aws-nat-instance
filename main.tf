@@ -42,7 +42,7 @@ resource "aws_route" "this" {
   network_interface_id   = aws_network_interface.this.id
 }
 
-# AMI of the latest Amazon Linux 2 
+# AMI of the latest Amazon Linux 2
 data "aws_ami" "this" {
   most_recent = true
   owners      = ["amazon"]
@@ -56,7 +56,7 @@ data "aws_ami" "this" {
   }
   filter {
     name   = "name"
-    values = ["al2023-*"]
+    values = ["al2023-ami-minimal-*"]
   }
   filter {
     name   = "virtualization-type"
